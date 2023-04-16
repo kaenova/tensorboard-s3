@@ -1,0 +1,8 @@
+export AWS_ACCESS_KEY_ID=******
+export AWS_SECRET_ACCESS_KEY=*******
+export S3_ENDPOINT=******
+export S3_VERIFY_SSL=0    
+export S3_USE_HTTPS=0 
+
+https://stackoverflow.com/questions/53218337/issue-accessing-s3-from-tensorflow
+https://stackoverflow.com/questions/47425882/tensorboard-logdir-with-s3-path
