@@ -35,6 +35,12 @@ if __name__ == "__main__":
         "--port",
         vars.port,
         "--bind_all",
+        "--reload_multifile",
+        "true",
+        "--purge_orphaned_data",
+        "true",
+        "--detect_file_replacement",
+        "true",
         "serve",
     ]
 
