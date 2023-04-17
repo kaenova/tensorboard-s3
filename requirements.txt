@@ -1,4 +1,4 @@
 tensorboard
 tensorflow-io
 boto3
-
+s3fs
