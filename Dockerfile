@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM tensorflow/tensorflow:2.11.0
 
 WORKDIR /app
 

@@ -1,8 +1,10 @@
 import os
-from tensorboard import program
 import subprocess
 import warnings
 
+from tensorboard import program
+import tensorflow_io as tfio
+from dotenv import load_dotenv
 
 class EnvVariables:
     def __init__(self):
@@ -26,6 +28,8 @@ class EnvVariables:
 
 
 if __name__ == "__main__":
+    load_dotenv()
+    
     vars = EnvVariables()
     s3_path = f"s3://{vars.s3_bucket_name}/{vars.logdir}"
     cmd = [
@@ -37,6 +41,8 @@ if __name__ == "__main__":
         "--bind_all",
         "--reload_multifile",
         "true",
+        "--reload_multifile_inactive_secs",
+        "3",
         "--purge_orphaned_data",
         "true",
         "--detect_file_replacement",

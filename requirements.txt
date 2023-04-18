@@ -1,4 +1,5 @@
 tensorboard
-tensorflow-io
+tensorflow-io==0.31.0
 boto3
+python-dotenv
 s3fs
