@@ -2,6 +2,8 @@ import os
 import subprocess
 import warnings
 
+from tensorboard import program
+import tensorflow_io as tfio
 from dotenv import load_dotenv
 
 class EnvVariables:
@@ -47,6 +49,8 @@ if __name__ == "__main__":
         "true",
         "serve",
     ]
+
+    print("running:", " ".join(cmd))
     
     # Launch TensorBoard using subprocess
     process = subprocess.Popen(cmd)
