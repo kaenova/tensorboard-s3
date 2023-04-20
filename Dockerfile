@@ -14,6 +14,7 @@ RUN apt install -y python3.8-distutils
 RUN apt-get install -y wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.8 get-pip.py
+RUN rm get-pip.py
 
 
 WORKDIR /app
@@ -23,8 +24,8 @@ RUN python3.8 -m pip install gdown
 # Community wheel of Tensorflow w/o AVX
 # https://github.com/yaroslavvb/tensorflow-community-wheels/issues/217
 RUN gdown 1T3WrRsiKBBqZn-LRaBQL6ulAQM-Unh3G
-RUN python3.8 --version
 RUN python3.8 -m pip install ./tensorflow-2.12.0-cp38-cp38-linux_x86_64.whl
+RUN rm ./tensorflow-2.12.0-cp38-cp38-linux_x86_64.whl
 
 COPY requirements.txt requirements.txt
 
