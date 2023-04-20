@@ -3,7 +3,6 @@ import subprocess
 import warnings
 
 from tensorboard import program
-import tensorflow_io as tfio
 from dotenv import load_dotenv
 
 class EnvVariables:
