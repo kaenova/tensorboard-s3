@@ -1,4 +1,4 @@
-FROM python:3.8.16-slim-buster
+FROM tensorflow/tensorflow:2.9.3
 
 WORKDIR /app
 
