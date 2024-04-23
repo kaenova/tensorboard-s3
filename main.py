@@ -21,7 +21,7 @@ class EnvVariables:
     def check_missing_vars(self):
         missing_vars = [var for var in vars(self) if getattr(self, var) is None]
         if missing_vars:
-            warnings(
+            warnings.warn(
                 f"WARNING: The following environment variables are missing: {', '.join(missing_vars)}"
             )
 
